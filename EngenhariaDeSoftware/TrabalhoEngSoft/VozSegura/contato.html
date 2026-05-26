@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos de Emergencia - Voz Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://browser.sentry-cdn.com/7.57.0/bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="subtitulo">Rede de Apoio</div>
+        <h1>Contatos de Emergencia</h1>
+        <p>Cadastre contatos de confianca que serao alertados imediatamente caso voce utilize o botao de emergencia.</p>
+        
+        <div class="grupo-campo">
+            <label for="nome-contato">Nome do Contato</label>
+            <input type="text" id="nome-contato" class="input" placeholder="Nome da pessoa">
+        </div>
+        
+        <div class="grupo-campo">
+            <label for="tel-contato">Telefone (SMS)</label>
+            <input type="tel" id="tel-contato" class="input" placeholder="(00) 00000-0000">
+        </div>
+        
+        <button class="btn-principal" onclick="salvarContato()">Salvar Contato</button>
+        <button class="btn-secundario" onclick="voltarPagina()">Voltar ao Menu</button>
+        
+        <div class="footer">
+            Os contatos salvos ficam guardados apenas no seu navegador.
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

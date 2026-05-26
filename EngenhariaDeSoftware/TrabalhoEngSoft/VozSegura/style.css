@@ -1,0 +1,272 @@
+/* ============================================
+   VOZ SEGURA — Estilos Globais
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #4b0033, #1a1a1a);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.container-largo {
+    max-width: 600px;
+}
+
+h1, h2 {
+    color: #f3d8f5;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+p {
+    color: #dfcfdf;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.subtitulo {
+    color: #b58fc1;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* ---------- Formulários ---------- */
+.grupo-campo {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    color: #e5d7eb;
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 4px 0 10px 0;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #b58fc1;
+}
+
+.input::placeholder {
+    color: #aaa;
+}
+
+select.input option {
+    background-color: #2b1241;
+    color: white;
+}
+
+textarea.input {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* ---------- Botões ---------- */
+button, .btn {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s, transform 0.1s;
+    outline: none;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+button:active, .btn:active {
+    transform: scale(0.98);
+}
+
+.btn-principal {
+    background-color: #7b2cbf;
+    color: white;
+}
+
+.btn-principal:hover {
+    background-color: #9d4edd;
+}
+
+.btn-secundario {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-emergencia {
+    background-color: #d62828;
+    color: white;
+}
+
+.btn-emergencia:hover {
+    background-color: #e63946;
+}
+
+.btn-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f3d8f5;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    font-size: 14px;
+}
+
+.btn-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ---------- Seções e Histórico ---------- */
+.bloco-conteudo {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.bloco-conteudo h3 {
+    color: #e5d7eb;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.bloco-conteudo p {
+    color: #ccc;
+    font-size: 13.5px;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* ---------- Toast Notification ---------- */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+    z-index: 10000;
+    pointer-events: none;
+    text-align: center;
+    width: auto;
+    max-width: 90%;
+}
+
+.toast.visivel {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.toast-sucesso {
+    background-color: #2e7d32;
+    border-left: 5px solid #4caf50;
+}
+
+.toast-erro {
+    background-color: #c62828;
+    border-left: 5px solid #ef5350;
+}
+
+/* ---------- Outros ---------- */
+.divisor {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+
+.divisor::before, .divisor::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.divisor:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.divisor:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #8c7894;
+}

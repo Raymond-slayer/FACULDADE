@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Principal - Voz Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://browser.sentry-cdn.com/7.57.0/bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container container-largo">
+        <div class="subtitulo">Painel de Controle</div>
+        <h1>Voz Segura</h1>
+        <p>Selecione um servico abaixo para acessar informacoes ou registrar ocorrencias em total sigilo.</p>
+        
+        <div class="bloco-conteudo">
+            <h3>Guias e Informacoes</h3>
+            <p>Acesse orientacoes detalhadas sobre a Lei Maria da Penha e tipos de violencia contra a mulher.</p>
+            <button class="btn-card" onclick="irParaInfo()">Acessar Guia Informativo</button>
+        </div>
+        
+        <div class="bloco-conteudo">
+            <h3>Contatos de Emergencia</h3>
+            <p>Cadastre telefones e e-mails de contatos de confianca para acionamento rapido em situacoes de perigo.</p>
+            <button class="btn-card" onclick="irParaContato()">Gerenciar Contatos</button>
+        </div>
+        
+        <div class="bloco-conteudo">
+            <h3>Registrar Denuncia</h3>
+            <p>Relate situacoes de violencia com total seguranca e privacidade. As informacoes sao mantidas em sigilo.</p>
+            <button class="btn-card" onclick="irParaDenuncia()">Criar Nova Denuncia</button>
+        </div>
+        
+        <div class="bloco-conteudo">
+            <h3>Historico de Ocorrencias</h3>
+            <p>Consulte a lista de ocorrencias e denuncias enviadas anteriormente no sistema.</p>
+            <button class="btn-card" onclick="irParaRelatorio()">Visualizar Historico</button>
+        </div>
+        
+        <div class="divisor">emergencia</div>
+        
+        <button class="btn-emergencia" onclick="irParaEmergencia()">Pedir Ajuda Imediata</button>
+        
+        <button class="btn-secundario" onclick="sair()">Sair do Sistema</button>
+        
+        <div class="footer">
+            Sua sessao e privada e segura.
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

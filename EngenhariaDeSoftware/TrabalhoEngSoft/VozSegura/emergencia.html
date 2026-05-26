@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Emergencial - Voz Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://browser.sentry-cdn.com/7.57.0/bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="subtitulo">Apoio Imediato</div>
+        <h1>Ajuda Emergencial</h1>
+        <p>Clique no botao abaixo para abrir as opcoes de socorro e alerta imediato.</p>
+        
+        <button class="btn-emergencia" onclick="mostrarOpcoes()">Pedir Socorro Agora</button>
+        
+        <div id="opcoes" style="display: none; margin-top: 20px;">
+            <div class="bloco-conteudo">
+                <h3>Acionar Servicos Publicos</h3>
+                <p>Ligacao direta para a Policia Militar.</p>
+                <button class="btn-principal" onclick="ajudaPolicia()">Ligar para a Policia Militar (190)</button>
+            </div>
+            
+            <div class="bloco-conteudo">
+                <h3>Alerta Silencioso</h3>
+                <p>Envia mensagens de socorro para seus contatos cadastrados.</p>
+                <button class="btn-secundario" onclick="ajudaContatos()">Alertar Contatos Cadastrados</button>
+            </div>
+        </div>
+        
+        <div class="divisor">testes</div>
+        
+        <button class="btn-secundario" onclick="gerarErro()">Simular Erro no Sentry</button>
+        <button class="btn-secundario" onclick="voltarPagina()">Voltar ao Menu</button>
+        
+        <div class="footer">
+            Mantenha a calma. Suas acoes estao protegidas e sao seguras.
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

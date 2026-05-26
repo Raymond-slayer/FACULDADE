@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Voz Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://browser.sentry-cdn.com/7.57.0/bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="subtitulo">Acesso Restrito</div>
+        <h1>Entrar no Sistema</h1>
+        <p>Acesse seu painel com total privacidade.</p>
+        
+        <div class="grupo-campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" class="input" placeholder="Digite seu e-mail">
+        </div>
+        
+        <div class="grupo-campo">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" class="input" placeholder="Digite sua senha">
+        </div>
+        
+        <button class="btn-principal" onclick="entrarSistema()">Entrar</button>
+        <button class="btn-secundario" onclick="voltar()">Voltar</button>
+        
+        <div class="divisor">ou</div>
+        
+        <button class="btn-emergencia" onclick="irParaEmergencia()">Pedir Ajuda Imediata</button>
+        
+        <div class="footer">
+            Ao entrar, voce concorda com nossos termos de sigilo.
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

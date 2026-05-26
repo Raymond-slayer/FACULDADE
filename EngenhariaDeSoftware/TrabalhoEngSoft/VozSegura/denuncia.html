@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Denuncia - Voz Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://browser.sentry-cdn.com/7.57.0/bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="subtitulo">Registro Sigiloso</div>
+        <h1>Registrar Denuncia</h1>
+        <p>Preencha os dados abaixo sobre a ocorrencia. Seus dados e relatorio serao protegidos sob sigilo absoluto.</p>
+        
+        <div class="grupo-campo">
+            <label for="data-fato">Data do Ocorrido</label>
+            <input type="date" id="data-fato" class="input">
+        </div>
+        
+        <div class="grupo-campo">
+            <label for="tipo-violencia">Tipo de Violencia</label>
+            <select id="tipo-violencia" class="input">
+                <option value="">Selecione o tipo...</option>
+                <option value="Física">Violencia Fisica</option>
+                <option value="Psicológica">Violencia Psicologica</option>
+                <option value="Sexual">Violencia Sexual</option>
+                <option value="Patrimonial">Violencia Patrimonial</option>
+                <option value="Moral">Violencia Moral</option>
+            </select>
+        </div>
+        
+        <div class="grupo-campo">
+            <label for="detalhes">Detalhes e Relato</label>
+            <textarea id="detalhes" class="input" placeholder="Descreva brevemente o ocorrido..."></textarea>
+        </div>
+        
+        <div class="grupo-campo">
+            <label for="agressor">Nome do Agressor (Opcional)</label>
+            <input type="text" id="agressor" class="input" placeholder="Se souber, digite o nome">
+        </div>
+        
+        <div class="grupo-campo">
+            <label for="parentesco">Grau de Parentesco / Relação</label>
+            <input type="text" id="parentesco" class="input" placeholder="Ex: Marido, ex-companheiro, etc.">
+        </div>
+        
+        <button class="btn-principal" onclick="enviarDenuncia()">Enviar Denuncia</button>
+        <button class="btn-secundario" onclick="voltarPagina()">Voltar ao Menu</button>
+        
+        <div class="footer">
+            Caso esteja em perigo imediato, utilize o botao de ajuda emergencial no menu.
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
